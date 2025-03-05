@@ -1,0 +1,157 @@
+/* Add a background color or image to the body */
+body {
+  font-family: Arial, sans-serif;
+  background-color: #fff;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+/* Style the navigation bar */
+nav {
+  background-color: #fff; /* Change to white */
+  color: #333;
+  padding: 10px 0;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Add a subtle shadow */
+}
+
+.nav-main {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.nav-header {
+  display: flex;
+  align-items: center;
+}
+
+.nav-header img {
+  height: 50px;
+  margin-right: 20px;
+}
+
+.nav-text {
+  display: flex;
+  flex-direction: column;
+}
+
+.nav-text h1 {
+  font-size: 1.5em;
+  font-weight: bold;
+  margin: 0;
+}
+
+.nav-text h2 {
+  font-size: 1em;
+  font-weight: normal;
+  margin: 0;
+  color: #653819; /* Lighter gray color for contrast */
+}
+
+.menu {
+  list-style: none;
+  display: flex;
+  gap: 20px; /* Add space between the menu items */
+  margin-top: 10px; /* Add some space between the text and the menu */
+  padding-left: 0; /* Align to the left */
+}
+
+.menu li {
+  display: inline; /* Display menu items in a row */
+}
+
+.menu a {
+  color: #333; /* Change to dark color */
+  text-decoration: none;
+  padding: 10px 20px;
+  transition: background-color 0.3s;
+  text-align: left; /* Left align the text */
+}
+
+.menu a:hover {
+  background-color: #f4f4f4;
+  border-radius: 5px;
+}
+
+.menu a.active {
+  background-color: #ddd; /* Highlight the active link */
+  border-radius: 5px;
+}
+
+/* Style the welcome message */
+.welcome-msg {
+  text-align: center;
+  margin: 50px 0;
+  padding: 100px 0;
+  background: url('images/waterflow.gif') no-repeat center center;
+  background-size: cover;
+  color: #fff;
+}
+
+.welcome-msg h1 {
+  font-size: 3em;
+  color: #fff;
+}
+
+/* Style the banner */
+.banner-div {
+  text-align: center;
+  margin: 200px 0;
+}
+
+.banner-div img {
+max-width: 100%;
+border-radius: 10px;
+box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  height: auto;
+}
+
+.image-credit {
+  display: block;
+  margin-top: 10px;
+  font-size: 0.9em;
+  color: #666;
+}
+
+.image-credit a {
+  color: #007BFF;
+  text-decoration: none;
+}
+
+.image-credit a:hover {
+  text-decoration: underline;
+}
+
+/* Style the welcome message */
+.welcome-message {
+  text-align: center;
+  margin: 20px auto;
+  padding: 20px;
+  background-color: #f9f9f9;
+  border-radius: 10px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  max-width: 800px; /* Set a fixed width */
+}
+
+.welcome-message p {
+  font-size: 1.2em;
+  color: #333;
+  margin: 10px 0;
+}
+
+/* Enhance the footer */
+footer {
+  background-color: #fff; /* Change to white */
+  color: #333;
+  text-align: center;
+  padding: 20px 0;
+  box-shadow: 0 -2px 4px rgba(0, 0, 0, 0.1); /* Add a subtle shadow */
+  margin-top: auto;
+  width: 100%;
+}
