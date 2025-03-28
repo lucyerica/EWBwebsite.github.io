@@ -9,7 +9,6 @@ body {
   min-height: 100vh;
 }
 
-/* Style the navigation bar */
 nav {
   background-color: #fff; /* Change to white */
   color: #333;
@@ -79,23 +78,96 @@ nav {
   border-radius: 5px;
 }
 
-.menu a.active {
-  background-color: #ddd; /* Highlight the active link */
-  border-radius: 5px;
+.menu > li:hover .dropdown-menu {
+  display: block;
 }
+
+
+/* Style for dropdown menu */
+.menu {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+}
+
+.menu > li {
+  position: relative;
+  margin: 0; /* Remove any extra margin */
+  padding: 0; /* Remove any extra padding */
+}
+
+.menu > li > a {
+  text-decoration: none;
+  padding: 10px 20px; /* Adjust padding for consistent spacing */
+  display: block;
+  color: #000;
+  text-align: center; /* Center-align text */
+}
+
+.menu > li:hover .dropdown-menu {
+  display: block;
+  opacity: 1; /* Make it fully visible */
+  transform: translateY(0); /* Reset the position */
+}
+
+.dropdown-menu {
+  display: block; /* Keep it block for animation purposes */
+  opacity: 0; /* Start as invisible */
+  transform: translateY(-10px); /* Start slightly above */
+  position: absolute;
+  top: 100%;
+  left: 0;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  background: linear-gradient(135deg, #f9f9f9, #e6e6e6); /* Gradient background */
+  border: 1px solid #ccc;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+  z-index: 1000;
+  transition: opacity .8s ease, transform 0.5s ease; /* Smooth transition */
+  pointer-events: none; /* Prevent interaction when hidden */
+}
+
+.menu > li:hover .dropdown-menu {
+  pointer-events: auto; /* Enable interaction when visible */
+}
+
+.dropdown-menu li {
+  width: 200px;
+  border-bottom: 1px solid #ddd; /* Add dividers between items */
+}
+
+.dropdown-menu li a {
+  text-decoration: none;
+  padding: 10px 15px;
+  display: block;
+  color: #333;
+  font-size: 1rem;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.dropdown-menu li a:hover {
+  background-color: #ccc;
+}
+
 
 /* Style the welcome message */
 .welcome-msg {
-  text-align: center;
-  margin: 50px 0;
+  text-align: left; /* Keep the text aligned to the left */
+  margin: 0px 0; /* Add vertical spacing */
+  padding-left: 100000px; /* Move the message slightly to the right */
+  color: #333; /* Optional: Adjust text color */
   padding: 100px 0;
-  background: url('images/waterflow.gif') no-repeat center center;
+  background: url('images/elmorro.jpg') no-repeat  center;
   background-size: cover;
   color: #fff;
 }
 
 .welcome-msg h1 {
-  font-size: 3em;
+  font-size: 6em;
+  padding-top: 30px;
+  padding-left: 130px;
   color: #fff;
 }
 
@@ -106,10 +178,11 @@ nav {
 }
 
 .banner-div img {
-max-width: 100%;
-border-radius: 10px;
-box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  height: auto;
+  max-width: 100%;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  height: 500px; /* Increase the height of the image */
+  object-fit: cover; /* Ensure the image scales proportionally */
 }
 
 .image-credit {
@@ -131,27 +204,37 @@ box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 /* Style the welcome message */
 .welcome-message {
   text-align: center;
-  margin: 20px auto;
+  margin: 80px auto; /* Increase the vertical margin */
   padding: 20px;
   background-color: #f9f9f9;
-  border-radius: 10px;
+  border-radius: 40px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-  max-width: 800px; /* Set a fixed width */
+  max-width: 10000px; /* Set a fixed width */
 }
 
 .welcome-message p {
-  font-size: 1.2em;
+  font-size: 1.7em;
   color: #333;
-  margin: 10px 0;
+  margin: 100px 100px;
+}
+
+.welcome-message p:first-of-type {
+  font-size: 2em; /* Make the text larger */
+  font-weight: bold; /* Make the text bold */
+}
+
+.box p:first-of-type {
+  font-weight: bold; /* Make the first paragraph bold */
 }
 
 /* Enhance the footer */
 footer {
-  background-color: #fff; /* Change to white */
-  color: #333;
+  background-color: #653819; /* Change to white */
+  color: #fff;
   text-align: center;
   padding: 20px 0;
   box-shadow: 0 -2px 4px rgba(0, 0, 0, 0.1); /* Add a subtle shadow */
   margin-top: auto;
   width: 100%;
 }
+

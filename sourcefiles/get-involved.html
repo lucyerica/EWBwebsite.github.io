@@ -8,8 +8,8 @@
   <link rel="stylesheet" href="styles-get-involved.css" />
 
   <title>Get Involved</title>
+  
 </head>
-
 <body>
 
   <nav>
@@ -23,14 +23,29 @@
             <li>
               <a href="index.html">Home</a>
             </li>
-            <li>
-              <a href="about.html">About Us</a>
-            </li>
-            <li>
-              <a href="international-projects.html">International Projects</a>
-            </li>
-            <li>
+            <li class="dropdown">
               <a href="local-projects.html">Local Projects</a>
+              <ul class="dropdown-menu">
+                <li><a href="local-projects/project1.html">Project 1</a></li>
+                <li><a href="local-projects/project2.html">Project 2</a></li>
+                <li><a href="local-projects/project3.html">Project 3</a></li>
+                <li><a href="local-projects/project4.html">Project 4</a></li>
+                <li><a href="local-projects/project5.html">Project 5</a></li>
+              </ul>
+            </li>
+            <li class="dropdown">
+              <a href="international-projects.html">International Projects</a>
+              <ul class="dropdown-menu">
+                <li><a href="international-projects/project1.html">Project 1</a></li>
+                <li><a href="international-projects/project2.html">Project 2</a></li>
+                <li><a href="international-projects/project3.html">Project 3</a></li>
+              </ul>
+            </li>
+            <li>
+              <a href="archive.html">Archive</a>
+            </li>
+            <li>
+              <a href="gallery.html">Gallery</a>
             </li>
             <li>
               <a href="get-involved.html" class="active">Get Involved</a>
@@ -40,21 +55,32 @@
       </div>
     </div>
   </nav>
-
   <div class="welcome-msg">
     <h1>Get Involved</h1>
+    <h2>Everyone is Welcome Regardless of Experience or Major</h2>
+  </div>
   </div>
 
-  <div class="welcome-message">
-    <p>Welcome to the Get Involved page of the Lehigh University Chapter of Engineers Without Borders!</p>
-    <p>Here you can find more information about how you can get involved and support our mission.</p>
+  <div class="content-section-container">
+    <!-- Existing 3 text boxes -->
+    <div class="content-section">
+      <p class="section-title">Join Us</p>
+      <p class="section-text">The Lehigh University Chapter of EWB is constantly looking for new members from all majors. 
+        Our club meetings are weekly on Wednesdays at 4:30 BIB Room 108.</p>
+    </div>
+    <div class="content-section">
+      <p class="section-title">Contact Us</p>
+      <p class="section-text">
+        Click <a href="contact.html" class="link">here</a> to contact any e-board member.
+      </p>
+    </div>
+    <div class="content-section">
+      <p class="section-title">Committees</p>
+      <p class="section-text">Join one of our committees to help with fundraising, outreach, translating, and more!</p>
+      <p class="section-text">Project and social classes are also available for credit.</p>
+    </div>
   </div>
 
-  <footer>
-    <p>&copy; 2025 Lehigh University Engineers Without Borders.</p>
-  </footer>
-
-  <script src="script.js"></script>
-</body>
+ 
 
 </html>
