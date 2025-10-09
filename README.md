@@ -1,2 +1,0 @@
-# EWBwebsite.github.io
-ewbwebsite
