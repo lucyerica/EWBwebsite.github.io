@@ -3,7 +3,7 @@ console.log(`${Date()} :: This is a starter template for a simple web app.`);
 
 // Mobile Menu Functionality
 document.addEventListener('DOMContentLoaded', function() {
-    const hamburgerBtn = document.getElementById('hamburger');
+    const hamburgerBtn = document.getElementById('hamburgerBtn');
     const mobileMenu = document.getElementById('menu');
     const menuOverlay = document.getElementById('menu-overlay');
     
