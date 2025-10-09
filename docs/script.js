@@ -3,9 +3,9 @@ console.log(`${Date()} :: This is a starter template for a simple web app.`);
 
 // Mobile Menu Functionality
 document.addEventListener('DOMContentLoaded', function() {
-    const hamburgerBtn = document.getElementById('hamburgerBtn');
-    const mobileMenu = document.getElementById('mobileMenu');
-    const menuOverlay = document.getElementById('menuOverlay');
+    const hamburgerBtn = document.getElementById('hamburger');
+    const mobileMenu = document.getElementById('menu');
+    const menuOverlay = document.getElementById('menu-overlay');
     
     // Check if elements exist (for pages that might not have mobile menu)
     if (hamburgerBtn && mobileMenu && menuOverlay) {
