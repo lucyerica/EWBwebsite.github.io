@@ -239,3 +239,165 @@ footer {
   text-align: center !important; /* Force center alignment */
   margin: 20px 0;
 }
+
+/* Responsive Design Media Queries */
+/* Mobile Devices (max-width: 768px) */
+@media screen and (max-width: 768px) {
+  .nav-main {
+    flex-direction: column;
+    padding: 0 10px;
+  }
+
+  .nav-header {
+    flex-direction: column;
+    text-align: center;
+    margin-bottom: 10px;
+  }
+
+  .nav-header img {
+    height: 40px;
+    margin-right: 0;
+    margin-bottom: 10px;
+  }
+
+  .nav-text h1 {
+    font-size: 1.2em;
+  }
+
+  .nav-text h2 {
+    font-size: 0.9em;
+  }
+
+  .menu {
+    flex-direction: column;
+    gap: 0;
+    width: 100%;
+    margin-top: 15px;
+  }
+
+  .menu > li {
+    width: 100%;
+    border-bottom: 1px solid #eee;
+  }
+
+  .menu > li > a {
+    padding: 15px 10px;
+    text-align: center;
+    width: 100%;
+    box-sizing: border-box;
+  }
+
+  .dropdown-menu {
+    position: static;
+    opacity: 1;
+    transform: none;
+    box-shadow: none;
+    border: none;
+    background: #f9f9f9;
+    display: none;
+  }
+
+  .menu > li:hover .dropdown-menu {
+    display: block;
+    opacity: 1;
+    transform: none;
+  }
+
+  .dropdown-menu li {
+    width: 100%;
+    border-bottom: 1px solid #ddd;
+  }
+
+  .dropdown-menu li a {
+    padding: 12px 20px;
+    font-size: 0.9em;
+  }
+
+  .welcome-msg {
+    padding: 30px 10px;
+    text-align: center;
+  }
+
+  .welcome-msg h1 {
+    font-size: 2em;
+    padding: 10px;
+  }
+
+  .carousel {
+    width: 95%;
+    margin: 50px auto;
+  }
+
+  .carousel-btn {
+    padding: 15px;
+    font-size: 18px;
+  }
+
+  .carousels-container {
+    flex-direction: column;
+    gap: 30px;
+    padding: 0 10px;
+  }
+
+  .carousels-container h1 {
+    font-size: 1.8em;
+  }
+}
+
+/* Tablet Devices (max-width: 1024px) */
+@media screen and (max-width: 1024px) and (min-width: 769px) {
+  .nav-main {
+    padding: 0 15px;
+  }
+
+  .nav-header img {
+    height: 45px;
+  }
+
+  .menu {
+    gap: 15px;
+  }
+
+  .menu > li > a {
+    padding: 8px 15px;
+    font-size: 0.95em;
+  }
+
+  .dropdown-menu li {
+    width: 180px;
+  }
+
+  .welcome-msg {
+    padding: 40px 20px;
+  }
+
+  .welcome-msg h1 {
+    font-size: 2.5em;
+  }
+
+  .carousel {
+    width: 90%;
+    margin: 70px auto;
+  }
+
+  .carousels-container {
+    gap: 25px;
+    padding: 0 15px;
+  }
+}
+
+/* Large Desktop Devices (min-width: 1200px) */
+@media screen and (min-width: 1200px) {
+  .nav-main {
+    max-width: 1400px;
+  }
+
+  .carousel {
+    width: 75%;
+  }
+
+  .carousels-container {
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+}

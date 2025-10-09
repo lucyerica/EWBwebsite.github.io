@@ -272,3 +272,156 @@ footer {
   text-decoration: underline; /* Add underline on hover */
 }
 
+/* Responsive Design Media Queries */
+/* Mobile Devices (max-width: 768px) */
+@media screen and (max-width: 768px) {
+  .nav-main {
+    flex-direction: column;
+    padding: 0 10px;
+  }
+
+  .nav-header {
+    flex-direction: column;
+    text-align: center;
+    margin-bottom: 10px;
+  }
+
+  .nav-header img {
+    height: 40px;
+    margin-right: 0;
+    margin-bottom: 10px;
+  }
+
+  .nav-text h1 {
+    font-size: 1.2em;
+  }
+
+  .nav-text h2 {
+    font-size: 0.9em;
+  }
+
+  .menu {
+    flex-direction: column;
+    gap: 0;
+    width: 100%;
+    margin-top: 15px;
+  }
+
+  .menu > li {
+    width: 100%;
+    border-bottom: 1px solid #eee;
+  }
+
+  .menu > li > a {
+    padding: 15px 10px;
+    text-align: center;
+    width: 100%;
+    box-sizing: border-box;
+  }
+
+  .dropdown-menu {
+    position: static;
+    opacity: 1;
+    transform: none;
+    box-shadow: none;
+    border: none;
+    background: #f9f9f9;
+    display: none;
+  }
+
+  .menu > li:hover .dropdown-menu {
+    display: block;
+    opacity: 1;
+    transform: none;
+  }
+
+  .dropdown-menu li {
+    width: 100%;
+    border-bottom: 1px solid #ddd;
+  }
+
+  .dropdown-menu li a {
+    padding: 12px 20px;
+    font-size: 0.9em;
+  }
+
+  .welcome-msg {
+    padding: 30px 10px;
+    text-align: center;
+  }
+
+  .welcome-msg h1 {
+    font-size: 2em;
+    padding: 10px;
+  }
+
+  .box-container {
+    grid-template-columns: 1fr;
+    gap: 30px;
+    margin: 20px 10px;
+  }
+
+  .box {
+    padding: 15px;
+  }
+
+  .box h2 {
+    font-size: 1.3em;
+  }
+
+  .box p {
+    font-size: 0.9em;
+  }
+}
+
+/* Tablet Devices (max-width: 1024px) */
+@media screen and (max-width: 1024px) and (min-width: 769px) {
+  .nav-main {
+    padding: 0 15px;
+  }
+
+  .nav-header img {
+    height: 45px;
+  }
+
+  .menu {
+    gap: 15px;
+  }
+
+  .menu > li > a {
+    padding: 8px 15px;
+    font-size: 0.95em;
+  }
+
+  .dropdown-menu li {
+    width: 180px;
+  }
+
+  .welcome-msg {
+    padding: 40px 20px;
+  }
+
+  .welcome-msg h1 {
+    font-size: 2.5em;
+  }
+
+  .box-container {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 40px;
+    margin: 30px 20px;
+  }
+}
+
+/* Large Desktop Devices (min-width: 1200px) */
+@media screen and (min-width: 1200px) {
+  .nav-main {
+    max-width: 1400px;
+  }
+
+  .box-container {
+    max-width: 1200px;
+    margin: 40px auto;
+    gap: 80px;
+  }
+}
+
