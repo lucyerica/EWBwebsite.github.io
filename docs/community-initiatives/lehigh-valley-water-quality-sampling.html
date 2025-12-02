@@ -72,6 +72,25 @@
     <h2>Project Overview</h2>
     <p>The Lehigh Valley Water Quality Sampling project involves systematic collection and analysis of water samples from various sources throughout the Lehigh Valley to monitor environmental health and water resource quality.</p>
     
+    <div class="carousels-container">
+      <!-- Carousel -->
+      <div class="carousel">
+        <div class="carousel-images">
+          <img src="../images/quality/river.JPG" alt="Collecting samples at river">
+          <img src="../images/quality/river_close.JPG" alt="Close up collection">
+          <img src="../images/quality/lab.JPG" alt="Lab work">
+          <img src="../images/quality/cups.JPG" alt="Samples">
+          <img src="../images/quality/two_cups.JPG" alt="Sample comparison">
+          <img src="../images/quality/canal.JPG" alt="Canal pH">
+          <img src="../images/quality/orange.JPG" alt="Canal vs Creek">
+          <img src="../images/quality/yellow.JPG" alt="Canal vs Creek">
+          <img src="../images/quality/pink.JPG" alt="Canal vs Creek">
+        </div>
+        <button class="carousel-btn prev">❮</button>
+        <button class="carousel-btn next">❯</button>
+      </div>
+    </div>
+
     <h3>Sampling Objectives</h3>
     <ul style="text-align: left; list-style-position: outside; font-size: 1.1em;">
       <li>Monitor water quality in local rivers, streams, and water bodies</li>
@@ -128,6 +147,35 @@
     <p>&copy; 2025 Lehigh University Engineers Without Borders.</p>
   </footer>
 
+  <script>
+    const carousels = document.querySelectorAll('.carousel');
+
+    carousels.forEach(carousel => {
+      const carouselImages = carousel.querySelector('.carousel-images');
+      const images = carousel.querySelectorAll('.carousel-images img');
+      const prevBtn = carousel.querySelector('.carousel-btn.prev');
+      const nextBtn = carousel.querySelector('.carousel-btn.next');
+
+      let currentIndex = 0;
+
+      function updateCarousel() {
+        const width = images[0].clientWidth;
+        carouselImages.style.transform = `translateX(-${currentIndex * width}px)`;
+      }
+
+      nextBtn.addEventListener('click', () => {
+        currentIndex = (currentIndex + 1) % images.length;
+        updateCarousel();
+      });
+
+      prevBtn.addEventListener('click', () => {
+        currentIndex = (currentIndex - 1 + images.length) % images.length;
+        updateCarousel();
+      });
+
+      window.addEventListener('resize', updateCarousel);
+    });
+  </script>
   <script src="../script.js"></script>
 </body>
 
