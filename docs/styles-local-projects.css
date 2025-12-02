@@ -185,6 +185,24 @@ nav {
   margin: 10px 0;
 }
 
+.project-links {
+  list-style: none;
+  margin: 20px 0 0;
+  padding: 0;
+  display: grid;
+  gap: 10px;
+}
+
+.project-links a {
+  color: #653819;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.project-links a:hover {
+  text-decoration: underline;
+}
+
 /* Enhance the footer */
 footer {
   background-color: #653819; /* Change to white */
