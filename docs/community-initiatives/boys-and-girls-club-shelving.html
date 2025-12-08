@@ -72,8 +72,21 @@
     <h2>Project Overview</h2>
     <p>As we begin our partnership with the local Boys and Girls Club, this initiative focuses on designing a space-efficient shelving system for their storage room. The team will collaborate closely with club members to ensure the final design reflects day-to-day needs and long-term usability.</p>
 
+    <div class="carousels-container">
+      <!-- Carousel -->
+      <div class="carousel">
+        <div class="carousel-images">
+          <img src="../images/boysngirls/bg_group.jpeg" alt="Visiting Boys and Girls Club">
+          <img src="../images/boysngirls/bg_work.jpeg" alt="Marshmallow & Spaghetti Challenge">
+          <img src="../images/boysngirls/bg_shelves.jpeg" alt="Storage Before">
+        </div>
+        <button class="carousel-btn prev">❮</button>
+        <button class="carousel-btn next">❯</button>
+      </div>
+    </div>
+
     <h3>Kick-Off Objectives</h3>
-    <ul>
+    <ul style="text-align: left; list-style-position: outside; font-size: 1.1em;">
       <li>Conduct site visits to document existing storage conditions and spatial constraints</li>
       <li>Gather detailed requirements through conversations with Boys and Girls Club staff and members</li>
       <li>Create initial sketches and alternative shelving concepts tailored to the space</li>
@@ -83,7 +96,7 @@
     <p>Throughout the semester the group will iterate on shelving layouts, incorporating direct feedback from the club. Each revision emphasizes accessibility, durability, and efficient use of vertical and horizontal space.</p>
 
     <h3>Feasibility Analysis</h3>
-    <ul>
+    <ul style="text-align: left; list-style-position: outside; font-size: 1.1em;">
       <li>Evaluate the material options that balance cost, availability, and ease of assembly</li>
       <li>Assess structural stability and load considerations for frequently used storage items</li>
       <li>Plan for modular elements that allow future expansion or reconfiguration</li>
@@ -100,6 +113,35 @@
     <p>&copy; 2025 Lehigh University Engineers Without Borders.</p>
   </footer>
 
+  <script>
+    const carousels = document.querySelectorAll('.carousel');
+
+    carousels.forEach(carousel => {
+      const carouselImages = carousel.querySelector('.carousel-images');
+      const images = carousel.querySelectorAll('.carousel-images img');
+      const prevBtn = carousel.querySelector('.carousel-btn.prev');
+      const nextBtn = carousel.querySelector('.carousel-btn.next');
+
+      let currentIndex = 0;
+
+      function updateCarousel() {
+        const width = images[0].clientWidth;
+        carouselImages.style.transform = `translateX(-${currentIndex * width}px)`;
+      }
+
+      nextBtn.addEventListener('click', () => {
+        currentIndex = (currentIndex + 1) % images.length;
+        updateCarousel();
+      });
+
+      prevBtn.addEventListener('click', () => {
+        currentIndex = (currentIndex - 1 + images.length) % images.length;
+        updateCarousel();
+      });
+
+      window.addEventListener('resize', updateCarousel);
+    });
+  </script>
   <script src="../script.js"></script>
 </body>
 

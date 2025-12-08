@@ -72,6 +72,20 @@
     <h2>Project Overview</h2>
     <p>The Wilbur Power House Fountain project focuses on the restoration and enhancement of the historic fountain at the Wilbur Power House, preserving this important piece of local heritage while improving its functionality and community accessibility.</p>
     
+    <div class="carousels-container">
+      <!-- Carousel -->
+      <div class="carousel">
+        <div class="carousel-images">
+          <img src="../images/wilbur/wilbur_pwrhouse_templeu.png" alt="Wilbur Powerhouse Project Group">
+          <img src="../images/wilbur/wilbur_pwrhouse_mock.png" alt="Wilbur Powerhouse Mock Up">
+          <img src="../images/wilbur/wilbur2.png" alt="Presenting">
+          <img src="../images/wilbur/wilbur3.png" alt="Presenting">
+        </div>
+        <button class="carousel-btn prev">❮</button>
+        <button class="carousel-btn next">❯</button>
+      </div>
+    </div>
+
     <h3>Historical Significance</h3>
     <p>The Wilbur Power House is a historic structure that represents an important part of the region's industrial heritage. The fountain serves as both a functional water feature and a symbol of the community's connection to its past.</p>
 
@@ -118,6 +132,35 @@
     <p>&copy; 2025 Lehigh University Engineers Without Borders.</p>
   </footer>
 
+  <script>
+    const carousels = document.querySelectorAll('.carousel');
+
+    carousels.forEach(carousel => {
+      const carouselImages = carousel.querySelector('.carousel-images');
+      const images = carousel.querySelectorAll('.carousel-images img');
+      const prevBtn = carousel.querySelector('.carousel-btn.prev');
+      const nextBtn = carousel.querySelector('.carousel-btn.next');
+
+      let currentIndex = 0;
+
+      function updateCarousel() {
+        const width = images[0].clientWidth;
+        carouselImages.style.transform = `translateX(-${currentIndex * width}px)`;
+      }
+
+      nextBtn.addEventListener('click', () => {
+        currentIndex = (currentIndex + 1) % images.length;
+        updateCarousel();
+      });
+
+      prevBtn.addEventListener('click', () => {
+        currentIndex = (currentIndex - 1 + images.length) % images.length;
+        updateCarousel();
+      });
+
+      window.addEventListener('resize', updateCarousel);
+    });
+  </script>
   <script src="../script.js"></script>
 </body>
 

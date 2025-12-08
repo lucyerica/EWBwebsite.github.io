@@ -72,6 +72,23 @@
     <h2>Project Overview</h2>
     <p>The Liberty High School Aquaponics project is an educational initiative that combines sustainable agriculture, environmental science, and engineering principles to create a functional aquaponics system for learning and food production.</p>
     
+    <div class="carousels-container">
+      <!-- Carousel -->
+      <div class="carousel">
+        <div class="carousel-images">
+          <img src="../images/aquaponics/liberty_aquaponics.png" alt="Aquaponics Project Group">
+          <img src="../images/aquaponics/aqua_draft.png" alt="System Set Up">
+          <img src="../images/aquaponics/aqua_progress.png" alt="Filling the System with Water">
+          <img src="../images/aquaponics/aqua_system.png" alt="System Complete">
+          <img src="../images/aquaponics/aqua_system2.png" alt="System Close Up">
+          <img src="../images/aquaponics/cool_fish.png" alt="Exotic Fish">
+          <img src="../images/aquaponics/fish.png" alt="Goldfish">
+        </div>
+        <button class="carousel-btn prev">❮</button>
+        <button class="carousel-btn next">❯</button>
+      </div>
+    </div>
+
     <h3>What is Aquaponics?</h3>
     <p>Aquaponics is a sustainable farming method that combines aquaculture (raising fish) with hydroponics (growing plants without soil). Fish waste provides nutrients for plants, while plants help filter and clean the water for the fish, creating a symbiotic ecosystem.</p>
 
@@ -116,6 +133,35 @@
     <p>&copy; 2025 Lehigh University Engineers Without Borders.</p>
   </footer>
 
+  <script>
+    const carousels = document.querySelectorAll('.carousel');
+
+    carousels.forEach(carousel => {
+      const carouselImages = carousel.querySelector('.carousel-images');
+      const images = carousel.querySelectorAll('.carousel-images img');
+      const prevBtn = carousel.querySelector('.carousel-btn.prev');
+      const nextBtn = carousel.querySelector('.carousel-btn.next');
+
+      let currentIndex = 0;
+
+      function updateCarousel() {
+        const width = images[0].clientWidth;
+        carouselImages.style.transform = `translateX(-${currentIndex * width}px)`;
+      }
+
+      nextBtn.addEventListener('click', () => {
+        currentIndex = (currentIndex + 1) % images.length;
+        updateCarousel();
+      });
+
+      prevBtn.addEventListener('click', () => {
+        currentIndex = (currentIndex - 1 + images.length) % images.length;
+        updateCarousel();
+      });
+
+      window.addEventListener('resize', updateCarousel);
+    });
+  </script>
   <script src="../script.js"></script>
 </body>
 
